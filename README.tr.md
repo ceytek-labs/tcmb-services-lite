@@ -1,8 +1,15 @@
 [🇬🇧 Click here for English version](README.md)
 
+![License](https://img.shields.io/github/license/ceytek-labs/tcmb)
+![SIZE](https://img.shields.io/github/repo-size/ceytek-labs/tcmb?label=size)
+
 # TCMB PHP Paketi
 
 TCMB (Türkiye Cumhuriyet Merkez Bankası) PHP paketi, TCMB'nin sunduğu çeşitli verileri ve API'leri kolayca kullanabilmeniz için tasarlanmıştır. Şu an için döviz kurlarını çekme özelliği sunmaktadır, ancak gelecekte TCMB'nin diğer API'lerini de kapsayacak şekilde genişletilebilir.
+
+## Gereklilikler
+
+- PHP 8.1 veya daha üstü
 
 ## Özellikler
 
