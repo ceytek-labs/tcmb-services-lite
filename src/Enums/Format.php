@@ -2,7 +2,7 @@
 
 namespace CeytekLabs\Tcmb\Enums;
 
-enum FormatType
+enum Format
 {
     case Object;
     case Array;

@@ -2,7 +2,7 @@
 
 namespace CeytekLabs\Tcmb\Enums;
 
-enum CurrencyCode: string
+enum Currency: string
 {
     case UnitedStatesDollar = 'USD';
     case AustralianDollar = 'AUD';
