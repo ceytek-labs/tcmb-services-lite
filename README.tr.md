@@ -133,6 +133,8 @@ use CeytekLabs\Tcmb\Enums\Format;
 print_r(ExchangeRates::make()->format(Format::Object)->content());
 ```
 
+Örnek çıktı:
+
 ```php
 stdClass Object
 (
@@ -178,6 +180,8 @@ use CeytekLabs\Tcmb\Enums\Format;
 
 print_r(ExchangeRates::make()->format(Format::Array)->content());
 ```
+
+Örnek çıktı:
 
 ```php
 Array
