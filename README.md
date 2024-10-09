@@ -1,7 +1,19 @@
 [🇹🇷 Türkçe sürüm için buraya tıklayın](README.tr.md)
 
-![License](https://img.shields.io/github/license/ceytek-labs/tcmb)
-![SIZE](https://img.shields.io/github/repo-size/ceytek-labs/tcmb?label=size)
+<p align="center">
+    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
+        <img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/tcmb">
+    </a>
+    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
+        <img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/tcmb">
+    </a>
+    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
+        <img alt="Size" src="https://img.shields.io/github/repo-size/ceytek-labs/tcmb">
+    </a>
+    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
+        <img alt="License" src="https://img.shields.io/packagist/l/ceytek-labs/tcmb">
+    </a>
+</p>
 
 # TCMB PHP Package
 
