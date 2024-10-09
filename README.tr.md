@@ -88,7 +88,7 @@ use CeytekLabs\Tcmb\Enums\Currency;
 $australianDollar = ExchangeRates::make()
     ->format(Format::Object)
     ->currency(Currency::AustralianDollar)
-    ->first();
+    ->find();
 ```
 
 ## Döviz Bilgilerine Erişmek

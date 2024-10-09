@@ -136,7 +136,7 @@ class ExchangeRates
         return $this;
     }
 
-    public function first(): \stdClass|array|null
+    public function find(): \stdClass|array|null
     {
         $currencies = $this->currencies();
 
@@ -153,7 +153,7 @@ class ExchangeRates
 
     public function code(): string
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->code;
@@ -168,7 +168,7 @@ class ExchangeRates
 
     public function turkishName(): string
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->name->tr;
@@ -183,7 +183,7 @@ class ExchangeRates
 
     public function englishName(): string
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->name->en;
@@ -198,7 +198,7 @@ class ExchangeRates
 
     public function unit(): string
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->unit;
@@ -213,7 +213,7 @@ class ExchangeRates
 
     public function forexBuying(): string|null
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->forex->buying;
@@ -228,7 +228,7 @@ class ExchangeRates
 
     public function forexSelling(): string|null
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->forex->selling;
@@ -243,7 +243,7 @@ class ExchangeRates
 
     public function banknoteBuying(): string|null
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->banknote->buying;
@@ -258,7 +258,7 @@ class ExchangeRates
 
     public function banknoteSelling(): string|null
     {
-        $currency = $this->first();
+        $currency = $this->find();
 
         if (is_object($currency)) {
             return $currency->banknote->selling;
