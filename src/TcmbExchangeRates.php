@@ -4,10 +4,8 @@ namespace CeytekLabs\Tcmb;
 
 use CeytekLabs\Tcmb\Enums\Currency;
 use CeytekLabs\Tcmb\Enums\Format;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
 
-class ExchangeRates
+class TcmbExchangeRates
 {
     private string $apiUrl = 'https://www.tcmb.gov.tr/kurlar/today.xml';
 
@@ -22,20 +20,31 @@ class ExchangeRates
     public static function make(): self
     {
         $instance = new self;
-
-        $client = new Client();
         
         try {
-            $instance->response = $client->request('GET', $instance->apiUrl)->getBody()->getContents();
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+                CURLOPT_URL => $instance->apiUrl,
+                CURLOPT_RETURNTRANSFER => true,
+            ]);
+
+            $instance->response = curl_exec($curl);
+
+            if (curl_errno($curl)) {
+                throw new \Exception('Error: '.curl_error($curl));
+            }
+
+            curl_close($curl);
 
             $xml = simplexml_load_string($instance->response);
 
             if ($xml === false) {
-                throw new \Exception('Invalid XML format. Please check ExchangeRates::make()->getResponse()');
+                throw new \Exception('Invalid XML format. Please check TcmbExchangeRates::make()->getResponse()');
             }
     
             $instance->jsonContent = json_encode($xml);
-        } catch (RequestException $exception) {
+        } catch (\Exception $exception) {
             throw new \Exception('Failed to fetch data from TCMB: ' . $exception->getMessage());
         }
 
@@ -57,7 +66,7 @@ class ExchangeRates
         $xml = simplexml_load_string($this->response);
 
         if ($xml === false) {
-            throw new \Exception('Invalid XML format. Please check ExchangeRates::make()->getResponse()');
+            throw new \Exception('Invalid XML format. Please check TcmbExchangeRates::make()->getResponse()');
         }
 
         $arrayContent = json_decode($this->jsonContent, true);

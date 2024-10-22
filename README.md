@@ -44,19 +44,19 @@ Below are basic usage examples and explanations of the package.
 ## Display Raw XML Result from the API
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 
 // Displays the raw XML result from the API
-echo ExchangeRates::make()->response();
+echo TcmbExchangeRates::make()->response();
 ```
 
 ## Display Raw JSON Result from the API
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 
 // Converts the raw XML result from the API to JSON and displays it
-echo ExchangeRates::make()->jsonContent();
+echo TcmbExchangeRates::make()->jsonContent();
 ```
 
 ## Formatting Exchange Rates
@@ -64,27 +64,27 @@ echo ExchangeRates::make()->jsonContent();
 You can receive data from the API in either object or array format. CamelCase is used in object format, and snake_case is used in array format.
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
 // Getting data in object format
-$exchangeRatesObject = ExchangeRates::make()->format(Format::Object)->content();
+$exchangeRatesObject = TcmbExchangeRates::make()->format(Format::Object)->content();
 
 // Getting data in array format
-$exchangeRatesArray = ExchangeRates::make()->format(Format::Array)->content();
+$exchangeRatesArray = TcmbExchangeRates::make()->format(Format::Array)->content();
 ```
 
 ## Getting All Exchange Rates
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
 // Getting all exchange rates in object format
-$currenciesObject = ExchangeRates::make()->format(Format::Object)->currencies();
+$currenciesObject = TcmbExchangeRates::make()->format(Format::Object)->currencies();
 
 // Getting all exchange rates in array format
-$currenciesArray = ExchangeRates::make()->format(Format::Array)->currencies();
+$currenciesArray = TcmbExchangeRates::make()->format(Format::Array)->currencies();
 ```
 
 ## Getting a Specific Currency
@@ -92,12 +92,12 @@ $currenciesArray = ExchangeRates::make()->format(Format::Array)->currencies();
 You can use the `currency()` method to get data for a specific currency.
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 use CeytekLabs\Tcmb\Enums\Currency;
 
 // For example, getting the Australian Dollar (AUD) rate
-$australianDollar = ExchangeRates::make()
+$australianDollar = TcmbExchangeRates::make()
     ->format(Format::Object)
     ->currency(Currency::AustralianDollar)
     ->find();
@@ -108,11 +108,12 @@ $australianDollar = ExchangeRates::make()
 You can access detailed information of a specific currency:
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
+use CeytekLabs\Tcmb\Enums\Format;
 use CeytekLabs\Tcmb\Enums\Currency;
 
 // Getting information for the USD currency
-$exchangeRates = ExchangeRates::make()
+$exchangeRates = TcmbExchangeRates::make()
     ->format(Format::Object)
     ->currency(Currency::UnitedStatesDollar);
 
@@ -146,10 +147,10 @@ echo $exchangeRates->banknoteSelling();
 ### Displaying All Data in Object Format
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
-print_r(ExchangeRates::make()->format(Format::Object)->content());
+print_r(TcmbExchangeRates::make()->format(Format::Object)->content());
 ```
 
 Sample output:
@@ -194,10 +195,10 @@ stdClass Object
 ### Displaying All Data in Array Format
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
-print_r(ExchangeRates::make()->format(Format::Array)->content());
+print_r(TcmbExchangeRates::make()->format(Format::Array)->content());
 ```
 
 Sample output:
@@ -268,7 +269,7 @@ The package supports the following currencies:
 ## Debugging
 
 - If the response from the API is invalid or an error occurs, an `Exception` will be thrown.
-- If the XML format is invalid, you will receive the following error: `Invalid XML format. Please check ExchangeRates::make()->getResponse()`
+- If the XML format is invalid, you will receive the following error: `Invalid XML format. Please check TcmbExchangeRates::make()->getResponse()`
 
 ## Future Plans
 

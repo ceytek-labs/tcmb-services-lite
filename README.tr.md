@@ -44,19 +44,19 @@ Aşağıda paketin temel kullanım örnekleri ve açıklamaları bulunmaktadır.
 ## API'den Gelen Ham XML Sonucunu Gösterme
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 
 // API'den gelen ham XML sonucunu görüntüler
-echo ExchangeRates::make()->response();
+echo TcmbExchangeRates::make()->response();
 ```
 
 ## API'den Gelen Ham JSON Sonucunu Gösterme
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 
 // API'den gelen ham XML sonucunu JSON formatına dönüştürür ve görüntüler
-echo ExchangeRates::make()->jsonContent();
+echo TcmbExchangeRates::make()->jsonContent();
 ```
 
 ## Döviz Kurlarını Formatlama
@@ -64,27 +64,27 @@ echo ExchangeRates::make()->jsonContent();
 API'den gelen verileri nesne veya dizi formatında alabilirsiniz. Nesne formatında camelCase, dizi formatında snake_case kullanılır.
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
 // Nesne formatında verileri almak
-$exchangeRatesObject = ExchangeRates::make()->format(Format::Object)->content();
+$exchangeRatesObject = TcmbExchangeRates::make()->format(Format::Object)->content();
 
 // Dizi formatında verileri almak
-$exchangeRatesArray = ExchangeRates::make()->format(Format::Array)->content();
+$exchangeRatesArray = TcmbExchangeRates::make()->format(Format::Array)->content();
 ```
 
 ## Tüm Döviz Kurlarını Alma
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
 // Nesne formatında tüm döviz kurlarını almak
-$currenciesObject = ExchangeRates::make()->format(Format::Object)->currencies();
+$currenciesObject = TcmbExchangeRates::make()->format(Format::Object)->currencies();
 
 // Dizi formatında tüm döviz kurlarını almak
-$currenciesArray = ExchangeRates::make()->format(Format::Array)->currencies();
+$currenciesArray = TcmbExchangeRates::make()->format(Format::Array)->currencies();
 ```
 
 ## Belirli Bir Dövizi Alma
@@ -92,12 +92,12 @@ $currenciesArray = ExchangeRates::make()->format(Format::Array)->currencies();
 Belirli bir dövizin verilerini almak için `currency()` metodunu kullanabilirsiniz.
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 use CeytekLabs\Tcmb\Enums\Currency;
 
 // Örneğin, Avustralya Doları (AUD) kurunu almak
-$australianDollar = ExchangeRates::make()
+$australianDollar = TcmbExchangeRates::make()
     ->format(Format::Object)
     ->currency(Currency::AustralianDollar)
     ->find();
@@ -108,11 +108,12 @@ $australianDollar = ExchangeRates::make()
 Belirli bir dövizin detaylı bilgilerine erişebilirsiniz:
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
+use CeytekLabs\Tcmb\Enums\Format;
 use CeytekLabs\Tcmb\Enums\Currency;
 
 // USD dövizinin bilgilerini almak
-$exchangeRates = ExchangeRates::make()
+$exchangeRates = TcmbExchangeRates::make()
     ->format(Format::Object)
     ->currency(Currency::UnitedStatesDollar);
 
@@ -146,10 +147,10 @@ echo $exchangeRates->banknoteSelling();
 ### Tüm Verilerin Nesne Formatında Gösterimi
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
-print_r(ExchangeRates::make()->format(Format::Object)->content());
+print_r(TcmbExchangeRates::make()->format(Format::Object)->content());
 ```
 
 Örnek çıktı:
@@ -194,10 +195,10 @@ stdClass Object
 ### Tüm Verilerin Dizi Formatında Gösterimi
 
 ```php
-use CeytekLabs\Tcmb\ExchangeRates;
+use CeytekLabs\Tcmb\TcmbExchangeRates;
 use CeytekLabs\Tcmb\Enums\Format;
 
-print_r(ExchangeRates::make()->format(Format::Array)->content());
+print_r(TcmbExchangeRates::make()->format(Format::Array)->content());
 ```
 
 Örnek çıktı:
@@ -268,7 +269,7 @@ Paket aşağıdaki para birimlerini desteklemektedir:
 ## Hata Ayıklama
 
 API'den gelen yanıt geçersiz ise veya bir hata oluşursa, bir `Exception` fırlatılır.
-XML formatı geçersiz olduğunda, şu hatayı alırsınız: `Invalid XML format. Please check ExchangeRates::make()->getResponse()`
+XML formatı geçersiz olduğunda, şu hatayı alırsınız: `Invalid XML format. Please check TcmbExchangeRates::make()->getResponse()`
 
 ## Gelecek Planları
 

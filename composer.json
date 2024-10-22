@@ -3,8 +3,7 @@
     "description": "Flexible and extensible TCMB PHP package; provides access to exchange rates and other TCMB API data.",
     "type": "library",
     "require": {
-        "php": "^8.1",
-        "guzzlehttp/guzzle": "^7.9"
+        "php": "^8.1"
     },
     "license": "MIT",
     "autoload": {
