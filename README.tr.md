@@ -31,14 +31,14 @@ composer require ceytek-labs/tcmb-services-lite
 ## Servisler
 
 - [TCMB Exchange Rates](#tcmb-exchange-rates)
-    - [API'den Gelen Ham XML Sonucunu Gösterme](#apiden-gelen-ham-xml-sonucunu-gosterme)
-    - [API'den Gelen Ham JSON Sonucunu Gösterme](#apiden-gelen-ham-json-sonucunu-gosterme)
-    - [Döviz Kurlarını Formatlama](#doviz-kurlarini-formatlama)
-    - [Tüm Döviz Kurlarını Alma](#tum-doviz-kurlarini-alma)
-    - [Belirli Bir Dövizi Alma](#belirli-bir-dovizi-alma)
-    - [Döviz Bilgilerine Erişmek](#doviz-bilgilerine-erismek)
-    - [Tüm Verilerin Nesne Formatında Gösterimi](#tum-verilerin-nesne-formatinda-gosterimi)
-    - [Tüm Verilerin Dizi Formatında Gösterimi](#tum-verilerin-dizi-formatinda-gosterimi)
+    - [API den Gelen Ham XML Sonucunu Gösterme](#api-den-gelen-ham-xml-sonucunu-gösterme)
+    - [API den Gelen Ham JSON Sonucunu Gösterme](#api-den-gelen-ham-json-sonucunu-gösterme)
+    - [Döviz Kurlarını Formatlama](#döviz-kurlarını-formatlama)
+    - [Tüm Döviz Kurlarını Alma](#tüm-döviz-kurlarını-alma)
+    - [Belirli Bir Dövizi Alma](#belirli-bir-dövizi-alma)
+    - [Döviz Bilgilerine Erişmek](#döviz-bilgilerine-erişmek)
+    - [Tüm Verilerin Nesne Formatında Gösterimi](#tüm-verilerin-nesne-formatında-gösterimi)
+    - [Tüm Verilerin Dizi Formatında Gösterimi](#tüm-verilerin-dizi-formatında-gösterimi)
     - [Desteklenen Para Birimleri](#desteklenen-para-birimleri)
 
 ## TCMB Exchange Rates
@@ -51,23 +51,23 @@ PHP projelerinizde **TCMB Döviz Kurları** sınıfını nasıl kullanabileceği
 
 **[⬆ Hizmetlere geri dön](#servisler)**
 
-#### API'den Gelen Ham XML Sonucunu Gösterme
+#### API den Gelen Ham XML Sonucunu Gösterme
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
 
-// API'den gelen ham XML sonucunu görüntüler
+// API den gelen ham XML sonucunu görüntüler
 echo TcmbExchangeRates::make()->response();
 ```
 
 **[⬆ Hizmetlere geri dön](#servisler)**
 
-#### API'den Gelen Ham JSON Sonucunu Gösterme
+#### API den Gelen Ham JSON Sonucunu Gösterme
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
 
-// API'den gelen ham XML sonucunu JSON formatına dönüştürür ve görüntüler
+// API den gelen ham XML sonucunu JSON formatına dönüştürür ve görüntüler
 echo TcmbExchangeRates::make()->jsonContent();
 ```
 
@@ -75,7 +75,7 @@ echo TcmbExchangeRates::make()->jsonContent();
 
 #### Döviz Kurlarını Formatlama
 
-API'den gelen verileri nesne veya dizi formatında alabilirsiniz. Nesne formatında camelCase, dizi formatında snake_case kullanılır.
+API den gelen verileri nesne veya dizi formatında alabilirsiniz. Nesne formatında camelCase, dizi formatında snake_case kullanılır.
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -292,7 +292,7 @@ Paket aşağıdaki para birimlerini desteklemektedir:
 
 ## Hata Ayıklama
 
-API'den gelen yanıt geçersiz ise veya bir hata oluşursa, bir `Exception` fırlatılır.
+API den gelen yanıt geçersiz ise veya bir hata oluşursa, bir `Exception` fırlatılır.
 XML formatı geçersiz olduğunda, şu hatayı alırsınız: `Invalid XML format. Please check TcmbExchangeRates::make()->getResponse()`
 
 ## Gelecek Planları
