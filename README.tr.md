@@ -54,7 +54,7 @@ PHP projelerinizde **TCMB Döviz Kurları** sınıfını nasıl kullanabileceği
 #### API den Gelen Ham XML Sonucunu Gösterme
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
 
 // API den gelen ham XML sonucunu görüntüler
 echo TcmbExchangeRates::make()->response();
@@ -65,7 +65,7 @@ echo TcmbExchangeRates::make()->response();
 #### API den Gelen Ham JSON Sonucunu Gösterme
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
 
 // API den gelen ham XML sonucunu JSON formatına dönüştürür ve görüntüler
 echo TcmbExchangeRates::make()->jsonContent();
@@ -78,8 +78,8 @@ echo TcmbExchangeRates::make()->jsonContent();
 API den gelen verileri nesne veya dizi formatında alabilirsiniz. Nesne formatında camelCase, dizi formatında snake_case kullanılır.
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 // Nesne formatında verileri almak
 $exchangeRatesObject = TcmbExchangeRates::make()->format(Format::Object)->content();
@@ -93,8 +93,8 @@ $exchangeRatesArray = TcmbExchangeRates::make()->format(Format::Array)->content(
 #### Tüm Döviz Kurlarını Alma
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 // Nesne formatında tüm döviz kurlarını almak
 $currenciesObject = TcmbExchangeRates::make()->format(Format::Object)->currencies();
@@ -110,9 +110,9 @@ $currenciesArray = TcmbExchangeRates::make()->format(Format::Array)->currencies(
 Belirli bir dövizin verilerini almak için `currency()` metodunu kullanabilirsiniz.
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
-use CeytekLabs\Tcmb\Enums\Currency;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
+use CeytekLabs\TcmbServicesLite\Enums\Currency;
 
 // Örneğin, Avustralya Doları (AUD) kurunu almak
 $australianDollar = TcmbExchangeRates::make()
@@ -128,9 +128,9 @@ $australianDollar = TcmbExchangeRates::make()
 Belirli bir dövizin detaylı bilgilerine erişebilirsiniz:
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
-use CeytekLabs\Tcmb\Enums\Currency;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
+use CeytekLabs\TcmbServicesLite\Enums\Currency;
 
 // USD dövizinin bilgilerini almak
 $exchangeRates = TcmbExchangeRates::make()
@@ -167,8 +167,8 @@ echo $exchangeRates->banknoteSelling();
 #### Tüm Verilerin Nesne Formatında Gösterimi
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 print_r(TcmbExchangeRates::make()->format(Format::Object)->content());
 ```
@@ -217,8 +217,8 @@ stdClass Object
 #### Tüm Verilerin Dizi Formatında Gösterimi
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 print_r(TcmbExchangeRates::make()->format(Format::Array)->content());
 ```

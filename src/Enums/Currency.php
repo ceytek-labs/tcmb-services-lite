@@ -1,6 +1,6 @@
 <?php
 
-namespace CeytekLabs\Tcmb\Enums;
+namespace CeytekLabs\TcmbServicesLite\Enums;
 
 enum Currency: string
 {

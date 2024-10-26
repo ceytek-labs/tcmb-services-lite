@@ -54,7 +54,7 @@ Here are a few examples of how you can use the **TCMB Exchange Rates** class in 
 #### Display Raw XML Result from the API
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
 
 // Displays the raw XML result from the API
 echo TcmbExchangeRates::make()->response();
@@ -65,7 +65,7 @@ echo TcmbExchangeRates::make()->response();
 #### Display Raw JSON Result from the API
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
 
 // Converts the raw XML result from the API to JSON and displays it
 echo TcmbExchangeRates::make()->jsonContent();
@@ -78,8 +78,8 @@ echo TcmbExchangeRates::make()->jsonContent();
 You can receive data from the API in either object or array format. CamelCase is used in object format, and snake_case is used in array format.
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 // Getting data in object format
 $exchangeRatesObject = TcmbExchangeRates::make()->format(Format::Object)->content();
@@ -93,8 +93,8 @@ $exchangeRatesArray = TcmbExchangeRates::make()->format(Format::Array)->content(
 #### Getting All Exchange Rates
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 // Getting all exchange rates in object format
 $currenciesObject = TcmbExchangeRates::make()->format(Format::Object)->currencies();
@@ -110,9 +110,9 @@ $currenciesArray = TcmbExchangeRates::make()->format(Format::Array)->currencies(
 You can use the `currency()` method to get data for a specific currency.
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
-use CeytekLabs\Tcmb\Enums\Currency;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
+use CeytekLabs\TcmbServicesLite\Enums\Currency;
 
 // For example, getting the Australian Dollar (AUD) rate
 $australianDollar = TcmbExchangeRates::make()
@@ -128,9 +128,9 @@ $australianDollar = TcmbExchangeRates::make()
 You can access detailed information of a specific currency:
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
-use CeytekLabs\Tcmb\Enums\Currency;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
+use CeytekLabs\TcmbServicesLite\Enums\Currency;
 
 // Getting information for the USD currency
 $exchangeRates = TcmbExchangeRates::make()
@@ -167,8 +167,8 @@ echo $exchangeRates->banknoteSelling();
 #### Displaying All Data in Object Format
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 print_r(TcmbExchangeRates::make()->format(Format::Object)->content());
 ```
@@ -217,8 +217,8 @@ stdClass Object
 #### Displaying All Data in Array Format
 
 ```php
-use CeytekLabs\Tcmb\TcmbExchangeRates;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 print_r(TcmbExchangeRates::make()->format(Format::Array)->content());
 ```

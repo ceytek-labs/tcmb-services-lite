@@ -1,9 +1,9 @@
 <?php
 
-namespace CeytekLabs\Tcmb;
+namespace CeytekLabs\TcmbServicesLite;
 
-use CeytekLabs\Tcmb\Enums\Currency;
-use CeytekLabs\Tcmb\Enums\Format;
+use CeytekLabs\TcmbServicesLite\Enums\Currency;
+use CeytekLabs\TcmbServicesLite\Enums\Format;
 
 class TcmbExchangeRates
 {

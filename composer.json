@@ -1,20 +1,38 @@
 {
     "name": "ceytek-labs/tcmb-services-lite",
-    "description": "Flexible and extensible TCMB Services Lite; provides access to exchange rates and other TCMB API data.",
+    "description": "A lightweight library for retrieving exchange rates and other data from TCMB's APIs.",
+    "keywords": [
+        "TCMB",
+        "exchange rates",
+        "Central Bank of Turkey",
+        "currency",
+        "forex",
+        "banknote rates",
+        "financial data",
+        "Turkey",
+        "lite library",
+        "php"
+    ],
+    "homepage": "https://github.com/ceytek-labs/tcmb-services-lite",
     "type": "library",
-    "require": {
-        "php": "^8.1"
-    },
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "CeytekLabs\\Tcmb\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "ceyhun-celik",
-            "email": "ceyhunbcelik@icloud.com"
+            "email": "ceyhunbcelik@icloud.com",
+            "role": "Developer"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "CeytekLabs\\TcmbServicesLite\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "support": {
+        "issues": "https://github.com/ceytek-labs/tcmb-services-lite/issues",
+        "source": "https://github.com/ceytek-labs/tcmb-services-lite"
+    }
 }
