@@ -20,12 +20,6 @@ TCMB (Türkiye Cumhuriyet Merkez Bankası) Services Lite, TCMB'nin sunduğu çe�
 
 - PHP 8.1 veya daha üstü
 
-## Özellikler
-
-- **Döviz Kurları**: Güncel döviz kurlarını TCMB üzerinden çeker.
-- **Esnek Yapı**: Verileri nesne veya dizi formatında alabilirsiniz.
-- **Genişletilebilirlik**: İleride TCMB'nin diğer API'lerini entegre etmek için uygun altyapı.
-
 ## Kurulum
 
 Bu paketi projelerinize eklemek için Composer kullanabilirsiniz:
@@ -34,11 +28,30 @@ Bu paketi projelerinize eklemek için Composer kullanabilirsiniz:
 composer require ceytek-labs/tcmb-services-lite
 ```
 
-## Kullanım
+## Servisler
 
-Aşağıda paketin temel kullanım örnekleri ve açıklamaları bulunmaktadır.
+- [TCMB Exchange Rates](#tcmb-exchange-rates)
+    - [API'den Gelen Ham XML Sonucunu Gösterme](#apiden-gelen-ham-xml-sonucunu-gosterme)
+    - [API'den Gelen Ham JSON Sonucunu Gösterme](#apiden-gelen-ham-json-sonucunu-gosterme)
+    - [Döviz Kurlarını Formatlama](#doviz-kurlarini-formatlama)
+    - [Tüm Döviz Kurlarını Alma](#tum-doviz-kurlarini-alma)
+    - [Belirli Bir Dövizi Alma](#belirli-bir-dovizi-alma)
+    - [Döviz Bilgilerine Erişmek](#doviz-bilgilerine-erismek)
+    - [Tüm Verilerin Nesne Formatında Gösterimi](#tum-verilerin-nesne-formatinda-gosterimi)
+    - [Tüm Verilerin Dizi Formatında Gösterimi](#tum-verilerin-dizi-formatinda-gosterimi)
+    - [Desteklenen Para Birimleri](#desteklenen-para-birimleri)
 
-## API'den Gelen Ham XML Sonucunu Gösterme
+## TCMB Exchange Rates
+
+**TCMB Exchange Rates**, Türkiye Cumhuriyet Merkez Bankası'ndan günlük döviz kurlarını alır ve çeşitli döviz bilgilerine kolay erişim sağlar.
+
+### Örnek Kullanım
+
+PHP projelerinizde **TCMB Döviz Kurları** sınıfını nasıl kullanabileceğinize dair birkaç örnek
+
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### API'den Gelen Ham XML Sonucunu Gösterme
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -47,7 +60,9 @@ use CeytekLabs\Tcmb\TcmbExchangeRates;
 echo TcmbExchangeRates::make()->response();
 ```
 
-## API'den Gelen Ham JSON Sonucunu Gösterme
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### API'den Gelen Ham JSON Sonucunu Gösterme
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -56,7 +71,9 @@ use CeytekLabs\Tcmb\TcmbExchangeRates;
 echo TcmbExchangeRates::make()->jsonContent();
 ```
 
-## Döviz Kurlarını Formatlama
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### Döviz Kurlarını Formatlama
 
 API'den gelen verileri nesne veya dizi formatında alabilirsiniz. Nesne formatında camelCase, dizi formatında snake_case kullanılır.
 
@@ -71,7 +88,9 @@ $exchangeRatesObject = TcmbExchangeRates::make()->format(Format::Object)->conten
 $exchangeRatesArray = TcmbExchangeRates::make()->format(Format::Array)->content();
 ```
 
-## Tüm Döviz Kurlarını Alma
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### Tüm Döviz Kurlarını Alma
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -84,7 +103,9 @@ $currenciesObject = TcmbExchangeRates::make()->format(Format::Object)->currencie
 $currenciesArray = TcmbExchangeRates::make()->format(Format::Array)->currencies();
 ```
 
-## Belirli Bir Dövizi Alma
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### Belirli Bir Dövizi Alma
 
 Belirli bir dövizin verilerini almak için `currency()` metodunu kullanabilirsiniz.
 
@@ -100,7 +121,9 @@ $australianDollar = TcmbExchangeRates::make()
     ->find();
 ```
 
-## Döviz Bilgilerine Erişmek
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### Döviz Bilgilerine Erişmek
 
 Belirli bir dövizin detaylı bilgilerine erişebilirsiniz:
 
@@ -139,9 +162,9 @@ echo $exchangeRates->banknoteBuying();
 echo $exchangeRates->banknoteSelling();
 ```
 
-## Örnek Çıktılar
+**[⬆ Hizmetlere geri dön](#servisler)**
 
-### Tüm Verilerin Nesne Formatında Gösterimi
+#### Tüm Verilerin Nesne Formatında Gösterimi
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -189,7 +212,9 @@ stdClass Object
 
 ```
 
-### Tüm Verilerin Dizi Formatında Gösterimi
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### Tüm Verilerin Dizi Formatında Gösterimi
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -236,7 +261,9 @@ Array
 )
 ```
 
-## Desteklenen Para Birimleri
+**[⬆ Hizmetlere geri dön](#servisler)**
+
+#### Desteklenen Para Birimleri
 
 Paket aşağıdaki para birimlerini desteklemektedir:
 

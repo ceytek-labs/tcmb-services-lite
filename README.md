@@ -20,12 +20,6 @@ The TCMB (Central Bank of the Republic of Turkey) Services Lite is designed to h
 
 - PHP 8.1 or higher
 
-## Features
-
-- **Exchange Rates**: Fetches current exchange rates from the TCMB.
-- **Flexible Structure**: You can receive data in object or array format.
-- **Scalability**: Built with an infrastructure suitable for integrating other TCMB APIs in the future.
-
 ## Installation
 
 You can add this package to your projects using Composer:
@@ -34,11 +28,30 @@ You can add this package to your projects using Composer:
 composer require ceytek-labs/tcmb-services-lite
 ```
 
-## Usage
+## Services
 
-Below are basic usage examples and explanations of the package.
+- [TCMB Exchange Rates](#tcmb-exchange-rates)
+    - [Display Raw XML Result from the API](#display-raw-xml-result-from-the-api)
+    - [Display Raw JSON Result from the API](#display-raw-json-result-from-the-api)
+    - [Formatting Exchange Rates](#formatting-exchange-rates)
+    - [Getting All Exchange Rates](#getting-all-exchange-rates)
+    - [Getting a Specific Currency](#getting-a-specific-currency)
+    - [Accessing Currency Information](#accessing-currency-information)
+    - [Displaying All Data in Object Format](#displaying-all-data-in-object-format)
+    - [Displaying All Data in Array Format](#displaying-all-data-in-array-format)
+    - [Supported Currencies](#supported-currencies)
 
-## Display Raw XML Result from the API
+## TCMB Exchange Rates
+
+The **TCMB Exchange Rates** retrieves daily exchange rates from the Central Bank of Turkey, providing easy access to various currency information.
+
+### Example Usage
+
+Here are a few examples of how you can use the **TCMB Exchange Rates** class in your PHP projects
+
+**[⬆ Back to services](#services)**
+
+#### Display Raw XML Result from the API
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -47,7 +60,9 @@ use CeytekLabs\Tcmb\TcmbExchangeRates;
 echo TcmbExchangeRates::make()->response();
 ```
 
-## Display Raw JSON Result from the API
+**[⬆ Back to services](#services)**
+
+#### Display Raw JSON Result from the API
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -56,7 +71,9 @@ use CeytekLabs\Tcmb\TcmbExchangeRates;
 echo TcmbExchangeRates::make()->jsonContent();
 ```
 
-## Formatting Exchange Rates
+**[⬆ Back to services](#services)**
+
+#### Formatting Exchange Rates
 
 You can receive data from the API in either object or array format. CamelCase is used in object format, and snake_case is used in array format.
 
@@ -71,7 +88,9 @@ $exchangeRatesObject = TcmbExchangeRates::make()->format(Format::Object)->conten
 $exchangeRatesArray = TcmbExchangeRates::make()->format(Format::Array)->content();
 ```
 
-## Getting All Exchange Rates
+**[⬆ Back to services](#services)**
+
+#### Getting All Exchange Rates
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -84,7 +103,9 @@ $currenciesObject = TcmbExchangeRates::make()->format(Format::Object)->currencie
 $currenciesArray = TcmbExchangeRates::make()->format(Format::Array)->currencies();
 ```
 
-## Getting a Specific Currency
+**[⬆ Back to services](#services)**
+
+#### Getting a Specific Currency
 
 You can use the `currency()` method to get data for a specific currency.
 
@@ -100,7 +121,9 @@ $australianDollar = TcmbExchangeRates::make()
     ->find();
 ```
 
-## Accessing Currency Information
+**[⬆ Back to services](#services)**
+
+#### Accessing Currency Information
 
 You can access detailed information of a specific currency:
 
@@ -139,9 +162,9 @@ echo $exchangeRates->banknoteBuying();
 echo $exchangeRates->banknoteSelling();
 ```
 
-## Example Outputs
+**[⬆ Back to services](#services)**
 
-### Displaying All Data in Object Format
+#### Displaying All Data in Object Format
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -189,7 +212,9 @@ stdClass Object
 
 ```
 
-### Displaying All Data in Array Format
+**[⬆ Back to services](#services)**
+
+#### Displaying All Data in Array Format
 
 ```php
 use CeytekLabs\Tcmb\TcmbExchangeRates;
@@ -236,7 +261,9 @@ Array
 )
 ```
 
-## Supported Currencies
+**[⬆ Back to services](#services)**
+
+#### Supported Currencies
 
 The package supports the following currencies:
 
