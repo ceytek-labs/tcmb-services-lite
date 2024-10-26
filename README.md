@@ -1,23 +1,20 @@
 [🇹🇷 Türkçe sürüm için buraya tıklayın](README.tr.md)
 
 <p align="center">
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/tcmb">
-    </a>
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/tcmb">
-    </a>
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="Size" src="https://img.shields.io/github/repo-size/ceytek-labs/tcmb">
-    </a>
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="License" src="https://img.shields.io/packagist/l/ceytek-labs/tcmb">
-    </a>
+    <img src="https://raw.githubusercontent.com/ceytek-labs/tcmb-services-lite/refs/heads/1.x/art/banner.png" width="400" alt="54grad.de Services Lite">
+    <p align="center">
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/tcmb-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/tcmb-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Size" src="https://img.shields.io/github/repo-size/ceytek-labs/tcmb-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="License" src="https://img.shields.io/packagist/l/ceytek-labs/tcmb-services-lite"></a>
+    </p>
 </p>
 
-# TCMB PHP Package
+------
 
-The TCMB (Central Bank of the Republic of Turkey) PHP package is designed to help you easily utilize various data and APIs provided by the TCMB. Currently, it offers the feature of fetching exchange rates, but it can be expanded in the future to include other APIs from the TCMB.
+# TCMB Services Lite
+
+The TCMB (Central Bank of the Republic of Turkey) Services Lite is designed to help you easily utilize various data and APIs provided by the TCMB. Currently, it offers the feature of fetching exchange rates, but it can be expanded in the future to include other APIs from the TCMB.
 
 ## Requirements
 
@@ -34,7 +31,7 @@ The TCMB (Central Bank of the Republic of Turkey) PHP package is designed to hel
 You can add this package to your projects using Composer:
 
 ```bash
-composer require ceytek-labs/tcmb
+composer require ceytek-labs/tcmb-services-lite
 ```
 
 ## Usage

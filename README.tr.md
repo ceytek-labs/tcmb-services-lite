@@ -1,23 +1,20 @@
 [🇬🇧 Click here for English version](README.md)
 
 <p align="center">
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/tcmb">
-    </a>
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/tcmb">
-    </a>
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="Size" src="https://img.shields.io/github/repo-size/ceytek-labs/tcmb">
-    </a>
-    <a href="https://packagist.org/packages/ceytek-labs/tcmb">
-        <img alt="License" src="https://img.shields.io/packagist/l/ceytek-labs/tcmb">
-    </a>
+    <img src="https://raw.githubusercontent.com/ceytek-labs/tcmb-services-lite/refs/heads/1.x/art/banner.png" width="400" alt="54grad.de Services Lite">
+    <p align="center">
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/tcmb-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/tcmb-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Size" src="https://img.shields.io/github/repo-size/ceytek-labs/tcmb-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="License" src="https://img.shields.io/packagist/l/ceytek-labs/tcmb-services-lite"></a>
+    </p>
 </p>
 
-# TCMB PHP Paketi
+------
 
-TCMB (Türkiye Cumhuriyet Merkez Bankası) PHP paketi, TCMB'nin sunduğu çeşitli verileri ve API'leri kolayca kullanabilmeniz için tasarlanmıştır. Şu an için döviz kurlarını çekme özelliği sunmaktadır, ancak gelecekte TCMB'nin diğer API'lerini de kapsayacak şekilde genişletilebilir.
+# TCMB Services Lite
+
+TCMB (Türkiye Cumhuriyet Merkez Bankası) Services Lite, TCMB'nin sunduğu çeşitli verileri ve API'leri kolayca kullanabilmeniz için tasarlanmıştır. Şu an için döviz kurlarını çekme özelliği sunmaktadır, ancak gelecekte TCMB'nin diğer API'lerini de kapsayacak şekilde genişletilebilir.
 
 ## Gereklilikler
 
@@ -34,7 +31,7 @@ TCMB (Türkiye Cumhuriyet Merkez Bankası) PHP paketi, TCMB'nin sunduğu çeşit
 Bu paketi projelerinize eklemek için Composer kullanabilirsiniz:
 
 ```bash
-composer require ceytek-labs/tcmb
+composer require ceytek-labs/tcmb-services-lite
 ```
 
 ## Kullanım

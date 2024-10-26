@@ -1,6 +1,6 @@
 {
-    "name": "ceytek-labs/tcmb",
-    "description": "Flexible and extensible TCMB PHP package; provides access to exchange rates and other TCMB API data.",
+    "name": "ceytek-labs/tcmb-services-lite",
+    "description": "Flexible and extensible TCMB Services Lite; provides access to exchange rates and other TCMB API data.",
     "type": "library",
     "require": {
         "php": "^8.1"
