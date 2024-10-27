@@ -16,6 +16,8 @@
 
 The TCMB (Central Bank of the Republic of Turkey) Services Lite is designed to help you easily utilize various data and APIs provided by the TCMB. Currently, it offers the feature of fetching exchange rates, but it can be expanded in the future to include other APIs from the TCMB.
 
+> **Disclaimer:** This package is not an official product of Central Bank of the Republic of Türkiye (Türkiye Cumhuriyet Merkez Bankası). The developers accept no responsibility for any issues, discrepancies, or damages that may arise from its use.
+
 ## Requirements
 
 - PHP 8.1 or higher

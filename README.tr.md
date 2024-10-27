@@ -16,6 +16,8 @@
 
 TCMB (Türkiye Cumhuriyet Merkez Bankası) Services Lite, TCMB'nin sunduğu çeşitli verileri ve API'leri kolayca kullanabilmeniz için tasarlanmıştır. Şu an için döviz kurlarını çekme özelliği sunmaktadır, ancak gelecekte TCMB'nin diğer API'lerini de kapsayacak şekilde genişletilebilir.
 
+> **Sorumluluk Reddi:** Bu paket, Türkiye Cumhuriyet Merkez Bankası'nın resmi bir ürünü değildir. Geliştiriciler, kullanımından doğabilecek herhangi bir sorun, tutarsızlık veya zarardan sorumlu değildir.
+
 ## Gereklilikler
 
 - PHP 8.1 veya daha üstü
