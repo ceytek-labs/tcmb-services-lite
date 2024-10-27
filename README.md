@@ -33,15 +33,15 @@ composer require ceytek-labs/tcmb-services-lite
 ## Services
 
 - [TCMB Exchange Rates](#tcmb-exchange-rates)
-    - [Display Raw XML Result from the API](#display-raw-xml-result-from-the-api)
-    - [Display Raw JSON Result from the API](#display-raw-json-result-from-the-api)
-    - [Formatting Exchange Rates](#formatting-exchange-rates)
-    - [Getting All Exchange Rates](#getting-all-exchange-rates)
-    - [Getting a Specific Currency](#getting-a-specific-currency)
-    - [Accessing Currency Information](#accessing-currency-information)
-    - [Displaying All Data in Object Format](#displaying-all-data-in-object-format)
-    - [Displaying All Data in Array Format](#displaying-all-data-in-array-format)
-    - [Supported Currencies](#supported-currencies)
+    - [Display Raw XML Result from the API](#tcmb-exchange-rates-display-raw-xml-result-from-the-api)
+    - [Display Raw JSON Result from the API](#tcmb-exchange-rates-display-raw-json-result-from-the-api)
+    - [Formatting Exchange Rates](#tcmb-exchange-rates-formatting-exchange-rates)
+    - [Getting All Exchange Rates](#tcmb-exchange-rates-getting-all-exchange-rates)
+    - [Getting a Specific Currency](#tcmb-exchange-rates-getting-a-specific-currency)
+    - [Accessing Currency Information](#tcmb-exchange-rates-accessing-currency-information)
+    - [Displaying All Data in Object Format](#tcmb-exchange-rates-displaying-all-data-in-object-format)
+    - [Displaying All Data in Array Format](#tcmb-exchange-rates-displaying-all-data-in-array-format)
+    - [Supported Currencies](#tcmb-exchange-rates-supported-currencies)
 
 ## TCMB Exchange Rates
 
@@ -53,7 +53,7 @@ Here are a few examples of how you can use the **TCMB Exchange Rates** class in 
 
 **[⬆ Back to services](#services)**
 
-#### Display Raw XML Result from the API
+#### TCMB Exchange Rates: Display Raw XML Result from the API
 
 ```php
 use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
@@ -64,7 +64,7 @@ echo TcmbExchangeRates::make()->response();
 
 **[⬆ Back to services](#services)**
 
-#### Display Raw JSON Result from the API
+#### TCMB Exchange Rates: Display Raw JSON Result from the API
 
 ```php
 use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
@@ -75,7 +75,7 @@ echo TcmbExchangeRates::make()->jsonContent();
 
 **[⬆ Back to services](#services)**
 
-#### Formatting Exchange Rates
+#### TCMB Exchange Rates: Formatting Exchange Rates
 
 You can receive data from the API in either object or array format. CamelCase is used in object format, and snake_case is used in array format.
 
@@ -92,7 +92,7 @@ $exchangeRatesArray = TcmbExchangeRates::make()->format(Format::Array)->content(
 
 **[⬆ Back to services](#services)**
 
-#### Getting All Exchange Rates
+#### TCMB Exchange Rates: Getting All Exchange Rates
 
 ```php
 use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
@@ -107,7 +107,7 @@ $currenciesArray = TcmbExchangeRates::make()->format(Format::Array)->currencies(
 
 **[⬆ Back to services](#services)**
 
-#### Getting a Specific Currency
+#### TCMB Exchange Rates: Getting a Specific Currency
 
 You can use the `currency()` method to get data for a specific currency.
 
@@ -125,7 +125,7 @@ $australianDollar = TcmbExchangeRates::make()
 
 **[⬆ Back to services](#services)**
 
-#### Accessing Currency Information
+#### TCMB Exchange Rates: Accessing Currency Information
 
 You can access detailed information of a specific currency:
 
@@ -166,7 +166,7 @@ echo $exchangeRates->banknoteSelling();
 
 **[⬆ Back to services](#services)**
 
-#### Displaying All Data in Object Format
+#### TCMB Exchange Rates: Displaying All Data in Object Format
 
 ```php
 use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
@@ -216,7 +216,7 @@ stdClass Object
 
 **[⬆ Back to services](#services)**
 
-#### Displaying All Data in Array Format
+#### TCMB Exchange Rates: Displaying All Data in Array Format
 
 ```php
 use CeytekLabs\TcmbServicesLite\TcmbExchangeRates;
@@ -265,7 +265,7 @@ Array
 
 **[⬆ Back to services](#services)**
 
-#### Supported Currencies
+#### TCMB Exchange Rates: Supported Currencies
 
 The package supports the following currencies:
 
