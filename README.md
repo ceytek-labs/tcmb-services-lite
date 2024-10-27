@@ -1,7 +1,7 @@
 [🇹🇷 Türkçe sürüm için buraya tıklayın](README.tr.md)
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ceytek-labs/tcmb-services-lite/refs/heads/1.x/art/banner.png" width="400" alt="54grad.de Services Lite">
+    <img src="https://raw.githubusercontent.com/ceytek-labs/google-services-lite/refs/heads/1.x/art/banner.jpg" width="400" alt="TCMB Services Lite">
     <p align="center">
         <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/tcmb-services-lite"></a>
         <a href="https://packagist.org/packages/ceytek-labs/tcmb-services-lite"><img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/tcmb-services-lite"></a>
